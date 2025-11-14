@@ -9,6 +9,13 @@ repo_type = "dataset"
 # Initialize API client
 api = HfApi(token=os.getenv("HF_TOKEN"))
 
+token = os.getenv("HF_TOKEN")
+if not token:
+    raise ValueError("HF_TOKEN is missing. CI runner is not receiving the token.")
+
+api = HfApi(token=token)
+
+
 # Step 1: Check if the space exists
 try:
     api.repo_info(repo_id=repo_id, repo_type=repo_type)

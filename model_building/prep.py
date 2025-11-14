@@ -12,9 +12,9 @@ from huggingface_hub import login, HfApi
 
 # Define constants for the dataset and output paths
 api = HfApi(token=os.getenv("HF_TOKEN"))
-DATASET_PATH = "hf://datasets/ssudhar/machine-failure-predictionv2/machine-failure-predictionv2.csv"
+DATASET_PATH = "hf://datasets/ssudhar/Machine-Failure-Predictionv2/machine-failure-predictionv2.csv"
 df = pd.read_csv(DATASET_PATH)
-print("Dataset loaded successfully...")
+print("Dataset loaded successfully.")
 
 # Drop the unique identifier
 df.drop(columns=['UDI'], inplace=True)
