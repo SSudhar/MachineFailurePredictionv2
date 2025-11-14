@@ -4,7 +4,7 @@ from huggingface_hub import hf_hub_download
 import joblib
 
 # Download and load the model
-model_path = hf_hub_download(repo_id="ssudhar/Machine_Failure_Modelv2", filename="best_machine_failure_model_v2.joblib")
+model_path = hf_hub_download(repo_id="SSudhar/machine_failure_modelv2", filename="best_machine_failure_model_v2.joblib")
 model = joblib.load(model_path)
 
 # Streamlit UI for Machine Failure Prediction
